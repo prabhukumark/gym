@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Details</title>
+  <link rel="stylesheet" href="updprof.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .upd {
+      text-align: center;
+    }
+
+    .upcard {
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: auto;
+      margin-top: 100%;
+    }
+    #mo{
+        display: block;
+        width: 100px;
+        background: rgba(255,111,0);
+        color: #fff;
+        padding : 12px;
+        margin: 10px auto;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .me{
+        justify-content: center;
+        text-align: center;
+        display: none;
+    }
+    .upcard img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text {
+      margin-bottom: 20px;
+    }
+
+    .text1 {
+      text-align: left;
+      margin-bottom: 5px;
+      width: 100%; 
+    }
+
+    #n {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+    .sub {
+  display: block;
+  width: 100px;
+  background: rgba(255, 111, 0);
+  color: #fff;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none; /* Add this line to remove the border */
+}
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .upd {
+            text-align: center;
+        }
+
+        .upcard {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: auto;
+            margin-top: 100%;
+        }
+
+        /* Add a button to close the modal */
+        .upcard button {
+            background: rgba(255, 111, 0);
+            color: #fff;
+            padding: 12px;
+            margin: 10px auto;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="upd">
+    <div class="upcard">
+      <form class="form" method="post"  >
+        <h1 class="text">Update Your Details</h1>
+        
+        <img src="profile.jpg" id="profile">
+        <label for="input-file" id="mo">Update Image</label><br>
+<input type="file" id="input-file" class="me" accept="image/jpeg, image/png, image/jpg" required>
+
+        <label for="name" class="text1">Name:</label>
+        <input type="text" id="n" class="name" name="name" required>
+
+        <label for="phone" class="text1">Phone:</label>
+        <input type="number" id="n" name="phone" required>
+
+        <label for="dob" class="text1">Date of Birth:</label>
+        <input type="date" id="n" name="dob" required>
+
+        <label for="occup" class="text1">Occupation:</label>
+        <input type="text" id="n" name="occup" required>
+
+        <label for="age" class="text1">Age:</label>
+        <input type="number" id="n" name="age" required>
+
+        <label for="height" class="text1">Height:</label>
+        <input type="number" id="n" name="height" required>
+
+        <label for="weight" class="text1">Weight:</label>
+        <input type="number" id="n" name="weight" required>
+        
+        <button class="sub" type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    
+        let profilePic= document.getElementById("profile");
+    let inputFile= document.getElementById("input-file");
+    
+
+        inputFile.onchange = function () {
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+            // Set the file name in the hidden input
+            
+    }
+    </script>
+</body>
+</html>
+
+    
